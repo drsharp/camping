@@ -99,12 +99,22 @@ So some behavior objects might be:
 - A ReservationMaker class that knows how to turn a Trip value object into a Trip with Reservation value object
 
 
+### Possible Starting Cucumber Features
 
-I want to start with enough plumbing to get some Cucumber going, then some RSpec. 
+Just fleshing out ideas...
 
-Strategy:
-1. do some very basic structure design (back of napkin-like). Find the boundaries.
-2. set up Gemfile with minimum to get started: cucumber, rspec, pry
-2. 
+* As a Camper, I want to create a Trip
+* I want to reserve a campsite at a campground (assumes campground, campsite and trip)
+* I want to list available campsites at a campground
+* I want to list campgrounds within 30 miles of me
 
+I think those could become Cucumber stories.
 
+So let's start with the bare minimum to get those going:
+
+1. RVM and Gemset
+2. Bundler
+3. Cucumber
+4. RSpec
+5. Set up basic feature to pass with pending steps
+6. Set up basic rspec to pass with no specs
