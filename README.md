@@ -112,9 +112,31 @@ I think those could become Cucumber stories.
 
 So let's start with the bare minimum to get those going:
 
-1. RVM and Gemset
-2. Bundler
-3. Cucumber
-4. RSpec
+1. RVM and Gemset x
+2. Bundler x
+3. Cucumber x
+4. RSpec x
+5. Set up folders:
+	- app/domain (where all domain objects will go)
+	- app/persistence (persistence)
+	- app/views (view code)
+	- app/controllers (controller code)
+	- app/ports? (ports/adapters code?)
+
+	- test/spec/domain (unit tests for domain classes)
+	- test/spec/functional (functional tests)
+	- test/spec/integration (integration tests)
+	- test/spec/support (support stuff)
+	- test/cuke/features (feature files for cucumber)
+	- test/cuke/steps (step definitions)
+	- test/cuke/support (support stuff)
+	
+	- config/ (eventually rails configs)
+	- log/ (eventually logging)
+	- lib/ (generic tools not really part of the app but not gems)
+	- tmp/ (in case I need tmp for pids and such)
+
+	- Skip any other stuff: DB/environments/etc.
+
 5. Set up basic feature to pass with pending steps
 6. Set up basic rspec to pass with no specs
