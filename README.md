@@ -24,12 +24,14 @@ These are the technologies I'm planning to use:
 * Rails 4 => Rails for the front end
 * Ember/Angular/? => Use a JS framework
 * Celluloid-IO => processing agent
+* Foundattion => UI framework
 
 These are some technology areas I want to explore:
 * Logging/Analytics
 * 3rd Party services like SendGrid
 * Newer gems
 * Newer testing tools
+
 
 ### Feature List
 Some features that I know I want at a high level (these will turn into Cucumber features eventually)
@@ -50,4 +52,48 @@ goals for how I want to approach this.
 - start with a high level general sense: rough object model, basic UIs
 - build a "walking skeleton" so I have the pieces in place: domain, rails, mongo
 - deploy to heroku
-- run an Ubuntu VM as execution stack (Paul's idea)
+- run an Ubuntu VM as execution stack (Paul's idea): vagrant or Docker
+
+### Domain Objects
+
+I'm still new to real DDD so the concept of an Aggregate is not quite sinking
+in yet. However, here are some of the basic domain objects (entities, )
+The aggregate roots are:
+
+
+
+
+
+   * Campground: represents details about a specific campground
+
+   * Camp Site: within a campground
+   * Camper: like a User but one who camps
+   * Gear: probably need better term. But like what kind of RV/tent/etc. you have
+   * Reservation: a Camper choosing a Camp Site at a Campground for a given date range
+   * Trip: Actually going camping. It has a reservation, and Gear and a Camper
+   * Journal: a collection of Entries about a Trip
+   * Entry: a blog-like write-up about a trip
+
+
+What isn't a value object? Something with behavior. Let's think outside-in. Do some design.
+
+As a Camper, I want to view Campgrounds
+As a Camper, I want to browse available Campsites within a Campground for a weekend
+As a Camper, I want to create a Reservation
+As a Camper, I want to change the Reservation into a Trip
+
+Actually, I don't think I need a reservation from this level. I create a Trip and it has various states: pending, reserved, paid, camped, skipped.
+
+
+
+
+
+
+I want to start with enough plumbing to get some Cucumber going, then some RSpec. 
+
+Strategy:
+1. do some very basic structure design (back of napkin-like). Find the boundaries.
+2. set up Gemfile with minimum to get started: cucumber, rspec, pry
+2. 
+
+
