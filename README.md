@@ -116,7 +116,7 @@ So let's start with the bare minimum to get those going:
 2. Bundler x
 3. Cucumber x
 4. RSpec x
-5. Set up folders:
+5. Set up folders: x
 	- app/domain (where all domain objects will go)
 	- app/persistence (persistence)
 	- app/views (view code)
@@ -138,5 +138,30 @@ So let's start with the bare minimum to get those going:
 
 	- Skip any other stuff: DB/environments/etc.
 
-5. Set up basic feature to pass with pending steps
-6. Set up basic rspec to pass with no specs
+5. Set up basic feature to pass with pending steps x
+6. Set up basic rspec to pass with no specs x
+
+Setup done:
+
+$ rspec
+Run options: include {:focus=>true}
+
+All examples were filtered out; ignoring {:focus=>true}
+
+Trip
+  should be true
+
+Finished in 0.00066 seconds
+1 example, 0 failures
+
+Randomized with seed 55424
+
+$ cucumber
+Using the default and html_report profiles...
+
+
+0 scenarios
+0 steps
+0m0.000s
+
+## On To The first Feature!
