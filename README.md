@@ -77,15 +77,26 @@ The aggregate roots are:
 
 What isn't a value object? Something with behavior. Let's think outside-in. Do some design.
 
-As a Camper, I want to view Campgrounds
-As a Camper, I want to browse available Campsites within a Campground for a weekend
-As a Camper, I want to create a Reservation
-As a Camper, I want to change the Reservation into a Trip
+* As a Camper, I want to view Campgrounds
+* As a Camper, I want to browse available Campsites within a Campground for a weekend
+* As a Camper, I want to create a Reservation
+* As a Camper, I want to change the Reservation into a Trip
 
 Actually, I don't think I need a reservation from this level. I create a Trip and it has various states: pending, reserved, paid, camped, skipped.
 
 
 
+Behavior is about creating/managing data, and changing state:
+
+- create a Trip (starting as 'pending')
+- change a Trip by making a reservation
+- update a Trip by going camping!
+- close out a Trip by making a write-up on it.
+
+So some behavior objects might be:
+
+- A TripMaker class that knows how to take data input and create a Trip value object
+- A ReservationMaker class that knows how to turn a Trip value object into a Trip with Reservation value object
 
 
 
