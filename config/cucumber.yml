@@ -1,0 +1,9 @@
+default: --profile html_report -r test/cuke/support -r test/cuke/steps test
+html_report: --format progress --format html --out=doc/features_report.html test
+
+# default: --format pretty test
+# default: -r test/cuke/features -r test/cuke/support/ -r test/cuke/steps
+
+# default: --profile html_report --profile bvt
+
+# bvt: --tags @bvt
