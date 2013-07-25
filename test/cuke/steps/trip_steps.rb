@@ -1,10 +1,7 @@
-
-Given(/^PENDING/) do
-  pending
-end
+# Trip-related steps
 
 When(/^I create a new Trip titled "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  pending
 end
 
 Then(/^I should see (\d+) trip with the title "(.*?)"$/) do |arg1, arg2|
