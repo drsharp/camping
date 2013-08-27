@@ -1,7 +1,8 @@
+# require 'trip'
 # Trip-related steps
 
-When(/^I create a new Trip titled "(.*?)"$/) do |arg1|
-  pending
+When(/^I create a new Trip titled "(.*?)"$/) do |title|
+  @trip = Trip.new(title)
 end
 
 Then(/^I should see (\d+) trip with the title "(.*?)"$/) do |arg1, arg2|
